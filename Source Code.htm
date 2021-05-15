@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *
+        {
+            margin: 0px;
+            padding: 0px;
+           
+        }
+          .navbar
+        {
+            display: flex;
+            
+           height: 59px;
+          position: sticky;
+          top: 0px;
+          
+        }
+        .navbar::before
+        {
+            content:"";
+            background-color: black;
+            height: 100%;
+            width: 100%;
+            position: absolute;
+            top: 0px;
+            opacity: 0.3;
+            z-index: -1;
+        }
+        .navbar ul
+        {
+            display: flex;
+            list-style-type: none;
+            align-items: center;
+            padding-left: 40px;
+        }
+        .navbar ul li a
+        {
+            display: block;
+            border-radius: 4px;
+            color: white;
+            padding: 1px 12px;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: larger;
+        }
+        .navbar ul li a:hover
+        {
+            background-color: red;
+        }
+        
+        
+        section {
+            display: flex;
+           
+            /* border: 1px solid black; */
+            /* width: 100%; */
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 339px;
+            /* margin: -41px 157px; */
+            flex-wrap: wrap;
+        }
+
+        section h1  {
+            
+            font-size: 3em;
+            padding: 0;
+            
+        }
+
+        section::before {
+            background: url('https://images.unsplash.com/photo-1445359179985-460648949e10?crop=entropy&cs=tinysrgb&fit=crop&fm=jpg&h=900&ixid=MnwxfDB8MXxyYW5kb218fHx8fHx8fHwxNjIwNzIzNjYx&ixlib=rb-1.2.1&q=80&utm_campaign=api-credit&utm_medium=referral&utm_source=unsplash_source&w=1600') no-repeat center center/cover;
+            content: "";
+            position: absolute;
+            top: 0px;
+            width: 100%;
+            left: 0px;
+            height: 462px;
+            z-index: -1;
+            opacity: 0.8;
+        }
+
+        section p {
+            padding: 2px 4px 5px 4px;
+    margin: 2px 97px;
+            font-weight: bolder;
+            font-size: 17px;
+            color: white;
+            text-align: center;
+        }
+
+        .btn {
+            border-radius: 6px;
+            height: 30px;
+            width: 80;
+            color: white;
+            background-color: black;
+            cursor: pointer;
+            text-align:center;
+        }
+
+        .btn:hover {
+            background-color: rgb(235, 230, 230);
+            color: red;
+            font-weight: bold;
+        }
+
+      
+        .first {
+            display: flex;
+            flex-direction: column;
+            flex-wrap: wrap;
+            margin-top: 79px;
+        }
+
+        .container {
+            display: flex;
+            /* flex-direction: row; */
+            align-items: center;
+            justify-content:space-evenly;
+            padding: 2px;
+            height: 350px;
+            flex-wrap: wrap;
+            cursor: pointer;
+        }
+        
+
+        .main {
+            border: 2px solid rgba(158, 6, 6, 0.726);
+            width: 370px;
+            height: 239px;
+            border-radius: 20px;
+            display: flex;
+            align-items: center;
+            padding: 11px 14px;
+            flex-direction: column;
+            text-align: center;
+            background-color: rgb(243, 207, 207);
+        }
+
+        .main:hover
+        {
+            background-color: rgb(209, 118, 118);
+            width: 375px;
+            height: 245px;
+            font-weight: bold;
+        }
+        .common h2 {
+            position: relative;
+            margin: auto;
+            font-size: 35px;
+            margin-top: 8px;
+        }
+        .main h2 
+        {
+          padding: 9px 0px 0px 0px;
+        }          
+        .second
+        {
+            display: flex;
+            
+            position: relative;
+            
+            height: 200px;
+           flex-direction: column;
+           
+             align-items: center;
+             
+             overflow: auto;
+             
+        }  
+        .second::before
+        {
+            content: "";
+            background: url('mediterranean-cuisine-2378758_1920.jpg') no-repeat center center/cover;
+            
+            position: absolute;
+            top: 0px;
+            width: 100%;
+            left: 0px;
+            height: 200px;
+            z-index: -3;
+            opacity: 0.4;
+        }
+        .second h2
+        {
+            margin-top: 15px;
+            font-size: 35px;
+        }
+        
+        .clients
+        {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+           
+        }
+        .logo
+        {
+           
+            width: 80px;
+            height: 40px;
+            margin: 20px 70px;
+        }
+        .third
+        {
+            height: 400px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding-top: 30px;
+            position: relative;
+            border: 1px solid black;
+        }
+        .third::before
+        {
+            content:"";
+            background: url('contact-us-1908762_1920.png') no-repeat center center/cover;
+            height: 400px;
+            width: 100%;
+            position: absolute;
+            margin: 0;
+            opacity: 0.2;
+            z-index: -1;
+
+        }
+        form 
+        {
+            padding-top: 6px;
+            margin: 4px 0px; 
+            border-radius: 8px;
+          
+            
+        }
+        form label
+        {
+            padding-top: 4px;
+        }
+        form input[type]
+        {
+            border-radius: 8px;
+            padding: 5px;
+            margin: 4px 0px;
+            width: 540px;
+        }
+        form input[type="submit"]
+        {
+            width: 60px;
+            border: 2px solid black;
+        }
+        form input[type="submit"]:hover
+        {
+           background-color: tomato;
+           font-size: 12px;
+           border: 2px solid yellow;
+           font-weight: bold;
+        }
+        form textarea
+        {
+            margin: 4px 0px; 
+            border-radius: 8px;
+            border: 2px solid black;
+            width: 552px;
+        }
+       
+        footer::before
+        {
+            
+        
+            content:"";
+            background-color: black;
+            height: 100%;
+            width: 100%;
+            position: absolute;
+            height: 30px;
+            opacity: 0.5;
+          z-index: -1;
+        
+        }
+        footer p
+        {
+            text-align: center;
+            color: white;
+            padding: 4px;
+        }
+    </style>
+</head>
+
+<body>
+    <nav class="navbar">
+        <ul>
+            <li><a href="#123">Home</a></li>
+            <li><a href="#123">About Us</a></li>
+            <li><a href="#123">Contact Us</a></li>
+            <li><a href="#123">Visit Us</a></li>
+            <li><a href="#123">Menu</a></li>
+        </ul>
+    </nav>
+
+        <section>
+            <h1>Welcome to my online meal</h1>
+            <p>Search the world's information, including webpages, images, videos and more. ces and products, which
+                include online Google has many special features to help you find exactly what you're looking for.</p>
+            <button class="btn">Order now!</button>
+        </section>
+  
+
+    <div class="first common">
+        <h2>Our Services</h2>
+        <div class="container">
+            <div class="main"><img src="1.png" width="112" height="92"><h2>Food Catering</h2><p>Relative positioning uses the same four positioning properties as absolute positioning, but instead of basing the position of the element upon its closest non-statically positioned ancestor, it starts from where the element would be if it were still in the normal flow.</p></div>
+            <div class="main"><img src="2.png" width="141" height="92"><h2>Food Catering</h2><p>Relative positioning uses the same four positioning properties as absolute positioning , but instead of basing the position of the element upon its closest non-statically positioned ancestor, it starts from where the element would be if it were still in the normal flow.</p></div>
+            <div class="main"><img src="3.png" width="141" height="87"><h2>Food Catering</h2><p>Relative positioning uses the same four positioning properties as absolute positioning , but instead of basing the position of the element upon its closest non-statically positioned ancestor, it starts from where the element would be if it were still in the normal flow.</p></div>
+        </div>
+    </div>
+    <div class="second">
+        <h2>Our Clients</h2>
+        <div class="clients">
+            <div class="logo"><img src="logo1.png" width="80" height="80"></div>
+            <div class="logo"><img src="logo2.png" width="80" height="80"></div>
+            <div class="logo"><img src="logo3.png" width="80" height="80"></div>
+            <div class="logo"><img src="logo4.png" width="80" height="80"></div>
+            
+        </div>
+    </div>
+    <div class="third">
+        <h2 style="font-size: 35px;">Contact Us</h2>
+        <form>
+            <label for="name">Name:</label><br>
+            <input type="text" placeholder="Enter your name"><br>
+            <label for="id">Email:</label><br>
+            <input type="email" placeholder="Enter your email Id"><br>
+            <label for="fdb">Feedback:</label><br>
+            <textarea name="message" rows="10" cols="30"></textarea><br>
+            <input type="submit">
+        </form>  
+    </div>
+    <footer>
+    <p>   Copyright &copy; www.myOnlineMeal.com. All rights reserved!</p>
+    </footer>
+</body>
+
+</html>
